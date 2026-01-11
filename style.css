@@ -2035,3 +2035,21 @@ body {
     transform: translateY(-50vmin) translateX(0vmin) rotate(0deg);
   }
 }
+
+/* ================= Estrelas ================= */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation: blinkStar 2s infinite alternate;
+}
+
+@keyframes blinkStar {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
