@@ -21,3 +21,19 @@ for (let i = 0; i < starCount; i++) {
   star.style.animationDelay = (Math.random() * 5) + 's';
   document.body.appendChild(star);
 }
+// === Tela cheia + cursor escondido e ESC para sair ===
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  }
+  document.body.style.cursor = 'none';
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+    document.body.style.cursor = 'default';
+  }
+});
