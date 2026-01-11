@@ -1,0 +1,12 @@
+{
+  "name": "drii-html",
+  "version": "1.0.0",
+  "description": "Projeto Drii Flutuando",
+  "main": "main.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "drii",
+  "license": "MIT",
+  "dependencies": {}
+}
