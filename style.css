@@ -1,9 +1,31 @@
+/* ================= Reset e tela cheia ================= */
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* remove barras de rolagem */
+  cursor: none;     /* opcional: esconde o cursor */
+  background: #000; /* fundo preto */
+  font-family: sans-serif;
+}
+
+:root {
+  --dark-color: #010113;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100vh;
+}
 }
 
 :root {
