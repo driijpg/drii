@@ -1,18 +1,24 @@
 onload = () => {
   document.body.classList.remove("container");
-}; const rickCount = 20; // Quantos "Rick" vão aparecer
+}; 
+const rickCount = 20; // Quantos "Rick" vão aparecer
 for (let i = 0; i < rickCount; i++) {
   const rick = document.createElement('div');
-rick.className = 'rick';
+  rick.className = 'rick';
 
-const nomes = ['Rick', 'drii'];
-rick.innerText = nomes[Math.floor(Math.random() * nomes.length)];
+  const nomes = ['Rick', 'drii'];
+  const nomeEscolhido = nomes[Math.floor(Math.random() * nomes.length)];
+  rick.innerText = nomeEscolhido;
 
-rick.style.left = Math.random() * 100 + 'vw';
-rick.style.animationDelay = (Math.random() * 6) + 's';
-rick.style.fontSize = (Math.random() * 1.5 + 1) + 'vmin';
+  // define cor: rosa chiclete só para "drii", amarelo para Rick
+  rick.style.color = nomeEscolhido === 'drii' ? '#ff69b4' : '#fff700';
 
-document.body.appendChild(rick);
+  rick.style.left = Math.random() * 100 + 'vw';
+  rick.style.animationDelay = (Math.random() * 6) + 's';
+  rick.style.fontSize = (Math.random() * 1.5 + 1) + 'vmin';
+
+  document.body.appendChild(rick);
+
 }
 // ================= Estrelas =================
 const starCount = 100; // Quantas estrelas
