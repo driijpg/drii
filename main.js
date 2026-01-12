@@ -7,19 +7,20 @@ for (let i = 0; i < rickCount; i++) {
   const rick = document.createElement('div');
   rick.className = 'rick';
 
-  const nomes = ['Rick', 'drii']; // nomes que vão aparecer
-  const nomeEscolhido = nomes[Math.floor(Math.random() * nomes.length)];
+  // Escolha 50/50 entre Rick e drii
+  const nomeEscolhido = Math.random() < 0.5 ? 'Rick' : 'drii';
   rick.innerText = nomeEscolhido;
 
-  // Define a cor e o brilho
+  // Define cor e brilho
   if (nomeEscolhido === 'drii') {
-    rick.style.color = '#ff4de1'; // rosa chiclete
-    rick.style.textShadow = "0 0 5px #ff4de1, 0 0 10px #ff80ff, 0 0 15px #ffb3ff";
+    rick.style.color = '#ff69b4'; // rosa chiclete
+    rick.style.textShadow = "0 0 5px #ff69b4, 0 0 10px #ff85c1, 0 0 15px #ffb3d9";
   } else {
     rick.style.color = '#fff700'; // amarelo
     rick.style.textShadow = "0 0 4px #fff700, 0 0 8px #fff700";
   }
 
+  // Posição e animação
   rick.style.left = Math.random() * 100 + 'vw';
   rick.style.animationDelay = (Math.random() * 6) + 's';
   rick.style.fontSize = (Math.random() * 1.5 + 1) + 'vmin';
